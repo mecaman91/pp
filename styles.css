@@ -1,0 +1,363 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-dark-grey: #464444;
+  --color-grey: #616161;
+  --color-light-grey: #7c7979;
+  --color-light-blue: #73aace;
+  --color-sky: #74b9ff;
+  --color-blue: #0984e3;
+  --color-logo: #83dcf3;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+  --color-black: #000000;
+
+  /* Font size 
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 16px;
+  --font-small: 16px;
+  --font-micro: 14px;
+ */
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Animation duration */
+  --animation-duration: 300ms;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+html {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  margin: 0;
+  cursor: default;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: rgb(248, 247, 245);
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  align-items: center;
+  color: var(--color-dark-grey);
+  padding: 5px 30px;
+  position: fixed;
+  width: 100%;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 99;
+  border-bottom: 1px solid var(--color-dark-white);
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-logo);
+  padding: 8px;
+}
+
+.navbar__menu {
+  display: flex;
+  margin: 8px 0px;
+}
+
+.navbar__logo a {
+  font-size: 20px;
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-dark-grey);
+  cursor: pointer;
+}
+
+.navbar__menu__item a {
+  padding: 8px 12px;
+  margin: 0 4px;
+  cursor: pointer;
+  color: var(--color-dark-grey);
+  font-weight: var(--weight-semi-bold);
+  /* border: 1px solid transparent;
+  border-radius: var(--size-border-radius); */
+}
+
+.navbar__menu__item.active a,
+.navbar__menu__item a:hover {
+  color: var(--color-blue);
+  /* border-bottom-color: var(--color-blue); */
+}
+
+.navbar__toggle-btn {
+  color: var(--color-white);
+  position: absolute;
+  right: 32px;
+  font-size: var(--font-medium);
+  display: none;
+}
+
+/* Home */
+
+#home {
+  display: flex;
+  width: 1500px;
+  /* padding: 40px; */
+  padding-top: 120px;
+  color: var(--color-dark-grey);
+  margin: auto;
+  /* text-align: center; */
+}
+
+.home__word {
+  width: 700px;
+  height: 700px;
+  margin: auto;
+}
+
+.home__word h1 {
+  margin: 0;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.home__word p,
+.home__word li {
+  list-style: square;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.home__text {
+  margin-bottom: 50px;
+}
+
+.home__img {
+  background: url(./images/nhshome.jpg) center/cover;
+  width: 700px;
+  height: 700px;
+  /* border-radius: 50%; */
+  margin: auto;
+  border-radius: 25px;
+  /* border: 2px var(--color-dark-grey) solid; */
+}
+
+/* About */
+
+#about {
+  margin: auto;
+  padding-top: 100px;
+  /* text-align: center; */
+  color: var(--color-dark-grey);
+}
+
+#about h1 {
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.about__info {
+  display: flex;
+  text-align: justify;
+  width: 300px;
+  margin-bottom: 25px;
+}
+
+.about__icons {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 900px;
+}
+
+.about__ii {
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.about__ii i {
+  font-size: 30px;
+}
+
+.about__it h3,
+p {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.about__it p {
+  font-size: 15px;
+}
+
+/* .about__avatar {
+  background: url('./images/증명사진.jpg') center/cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: auto;
+  border: 1px rgb(248, 247, 245) solid;
+} */
+
+.about__container {
+  /* background-color: white; */
+  margin: auto;
+  border: 0.5px solid rgb(248, 247, 245);
+  border-radius: 25px;
+  text-align: center;
+}
+
+/* .about__left,
+.about__right {
+  width: 700px;
+  height: 700px;
+  margin: auto;
+  border: 1px solid var(--color-dark-grey);
+  border-radius: 10px;
+} */
+
+.skills__img {
+  /* background-color: white; */
+  border: 0.5px solid rgb(248, 247, 245);
+  border-radius: 25px;
+  /* height: 500px; */
+}
+
+.skills__img ul {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 900px;
+}
+
+.skills__img li {
+  margin: auto;
+  font-size: 15px;
+}
+
+.skills__img li i {
+  font-size: 50px;
+}
+
+/* projects */
+.card__container {
+  width: 1200px;
+  margin: auto;
+  /* background: var(--color-dark-grey); */
+  padding-top: 130px;
+  height: 1400px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card__box {
+  /* margin: 0 auto; */
+  width: 550px;
+  height: 508px;
+  /* border: 0.5px solid var(--color-dark-grey); */
+}
+
+.card__img {
+  width: 100%;
+  height: 350px;
+  background: wheat;
+  align-items: center;
+}
+
+.card__img img {
+  width: 100%;
+  height: 350px;
+}
+
+.card__text {
+  width: 100%;
+  height: 150px;
+  background: white;
+  padding: 0 15px;
+  color: var(--color-dark-grey);
+}
+
+.card__text h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card__text li a {
+  color: var(--color-dark-grey);
+}
+
+/* contact */
+
+.ct__container {
+  width: 1500px;
+  margin: auto;
+  color: var(--color-grey);
+}
+
+.ct__box {
+  width: 800px;
+  margin: auto;
+  padding-top: 300px;
+}
+
+.ct__text {
+  padding-left: 20px;
+}
+
+.ct__text li h1 {
+  margin-bottom: 200px;
+  font-family: 'Black Han Sans', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.5;
+  color: var(--color-dark-grey);
+}
+
+.ct__text li,
+.ct__text li a {
+  font-size: 20px;
+  color: var(--color-grey);
+}
